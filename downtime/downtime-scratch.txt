@@ -1,0 +1,15 @@
+!DTlumber
+!DTgarden
+!DTscribe
+!DTresearch
+!DTfish
+!DTheal
+!DTspy
+!DTquarry
+!DThunt
+!DTpreach
+!DTbeg
+!DTzoo
+!DTenforcer
+!DTperform
+!DTcombat (rewards XP)
