@@ -3,7 +3,7 @@ Magpie Alias Suite:
 
 Magpie's Magic Item Search:
 
-!search "<item>" "<rarity>" optional: <bonus>
+!search item rarity optional: bonus
 
 Your Reputation Precedes You
 
