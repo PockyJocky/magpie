@@ -14,15 +14,13 @@ if ch.cc_exists(cc):
     Header = f"{name} checks the progress in their current downtime activity."
     if progress >= 100:
         Body = "You have already completed your training, I'm going to reset your counter and you can start again with new training"
-        ch.set_cc("Progress", 0)
+        ch.delete_cc("Progress")
     elif progress > 0:
-        Body = f"You have {progress}% progress in your current downtime activity."
+        Body = progress.desc + f"\nYou have made {progress}% toward your training."
     else:
         Body = "You haven't made any progress yet."
 else:
-    ch.create_cc_nx("Progress", 0, 100, "none", "default", 0, None, "Progress", "Counter that tracks the amount of progress you have made in your current Training.")
-    Header = f"{name} is setting up their Progress tracker"
-    Body = f"You did not have the Progress counter created, I've done that for you. You can check this counter with `!downtime progress`."
+    err("You did not have the Progress counter created, start a new training by doing `!downtime training` running that command for the first time will record what kind of training you are attempting. After that, run `!downtime progress` to track your progress."
 
 #The Output
 
