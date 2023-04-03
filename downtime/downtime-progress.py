@@ -16,7 +16,8 @@ if ch.cc_exists(cc):
         Body = "You have already completed your training, I'm going to reset your counter and you can start again with new training"
         ch.set_cc("Progress", 0)
     elif progress > 0:
-        Body = f"You have {progress}% progress in your current downtime activity."
+        progressCC = ch.cc(cc)
+        Body = progressCC.desc + f"\nYou have {progress}% progress in your current downtime activity."
     else:
         Body = "You haven't made any progress yet."
 else:
