@@ -47,13 +47,13 @@ else:
 if ch.cc_exists("Progress"):
     progress = ch.get_cc("Progress")
 else:
-    err("You did not have the Progress counter created. Please run `!downtime progress` before continuing.")
+    ch.create_cc_nx("Progress", 0, 100, "none", "default", 0, None, "Progress", f"Counter that tracks the amount of progress you have made in your {training.capitalize()} Training.")
 
 if progress < 100:
     Body = f"{Body}You currently have {progress}% toward finishing your {training.capitalize()} training.\n\n"
 else:
-    ch.set_cc("Progress", 0)
-    err("You are finished with your training, I have reset your progress counter so you can start new training.")
+    ch.delete_cc("Progress")
+    err("You are finished with your training, I have cleared your progress counter so you can start new training.")
 
 #which kind of skill/tool/language is it?
 skillDifficulty = 2
