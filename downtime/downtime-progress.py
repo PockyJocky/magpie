@@ -20,7 +20,7 @@ if ch.cc_exists(cc):
     else:
         Body = "You haven't made any progress yet."
 else:
-    err("You did not have the Progress counter created, start a new training by doing `!downtime training` running that command for the first time will record what kind of training you are attempting. After that, run `!downtime progress` to track your progress."
+    err("You did not have the Progress counter created, start a new training by doing `!downtime training` running that command for the first time will record what kind of training you are attempting. After that, run `!downtime progress` to track your progress.")
 
 #The Output
 
