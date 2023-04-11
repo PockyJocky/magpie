@@ -14,10 +14,9 @@ if ch.cc_exists(cc):
     Header = f"{name} checks the progress in their current downtime activity."
     if progress >= 100:
         Body = "You have already completed your training, I'm going to reset your counter and you can start again with new training"
-        ch.delete_cc("Progress", 0)
+        ch.delete_cc("Progress")
     elif progress > 0:
-        progressCC = ch.cc(cc)
-        Body = progressCC + f"\nYou have made {progress}% toward your training."
+        Body = progress.desc + f"\nYou have made {progress}% toward your training."
     else:
         Body = "You haven't made any progress yet."
 else:
