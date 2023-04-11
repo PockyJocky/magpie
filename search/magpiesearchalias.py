@@ -27,20 +27,20 @@ if itemName == "":
 
 if rarity.lower() == "common":
 	itemDiff = 5
-	prices.append(int(roll("1d4") * 25))
-	prices.append(int(roll("1d4") * 25))
+	prices.append(int(roll("2d4") * 25))
+	prices.append(int(roll("2d4") * 25))
 elif rarity.lower() == "uncommon":
 	itemDiff = 10
-	prices.append(int(roll("1d6") * 50))
-	prices.append(int(roll("1d6") * 50))
+	prices.append(int(roll("2d6") * 50))
+	prices.append(int(roll("2d6") * 50))
 elif rarity.lower() == "rare":
 	itemDiff = 15
-	prices.append(int(roll("1d8") * 400))
-	prices.append(int(roll("1d8") * 400))
+	prices.append(int(roll("2d8") * 400))
+	prices.append(int(roll("2d8") * 400))
 elif rarity.lower() == "very rare" or "very":
 	itemDiff = 20
-	prices.append(int(roll("1d10") * 2500))
-	prices.append(int(roll("1d10") * 2500))
+	prices.append(int(roll("2d10") * 2500))
+	prices.append(int(roll("2d10") * 2500))
 elif rarity.lower() == "legendary":
 	itemDiff = 25
 elif rarity.lower() == "artifact":
